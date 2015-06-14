@@ -1,11 +1,12 @@
+/*
 #include <iostream>
 #include <vector>
 #include <algorithm>
 
-/*
+
  * Contest: Code Forces Round #304 (Task 546-A)
  * URL: http://codeforces.ru/contest/546/problem/A
- */
+
 
 int main(int argc, char** argv)
 {
@@ -45,3 +46,4 @@ int main(int argc, char** argv)
     std::cout << count << std::endl;
     return 0;
 }
+*/

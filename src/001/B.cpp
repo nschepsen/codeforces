@@ -16,8 +16,7 @@ int main(int argc, char** argv)
     std::vector<int> v;
     char message[32];
 
-    int tests;
-    scanf("%d", &tests);
+    int tests; scanf("%d", &tests);
 
     while (tests--)
     {

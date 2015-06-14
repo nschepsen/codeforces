@@ -14,11 +14,24 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 # SUBFOLDERS
 add_subdirectory (src)
 
-FILE(GLOB TASKS_SRC src/*.cpp)
+FILE(GLOB CONTESTS_DIR ${PROJECT_BINARY_DIR}/src/*)
 
-FOREACH(tasksource ${TASKS_SRC})    
-    string(REGEX MATCH "T[0-9]+[A-Z]+" task ${tasksource})
-    add_executable(${task} ${tasksource})
-ENDFOREACH(tasksource ${TASKS_SRC})
+FOREACH(PATH ${CONTESTS_DIR})   
+ 
+    string(REGEX MATCH "[0-9]+" CONTEST ${PATH})  
+        
+    IF(${CONTEST})
+        FILE(GLOB TASKS ${PROJECT_BINARY_DIR}/src/${CONTEST}/*.cpp)                            
+        FOREACH(TASK ${TASKS})
+        
+            string(REGEX MATCH "[A-Z].cpp" TASK ${TASK})  
+            string(REGEX REPLACE ".cpp" "" TASK ${TASK})
+
+            add_executable("T0${CONTEST}${TASK}" "src/${CONTEST}/${TASK}.cpp")
+            
+        ENDFOREACH(TASK ${TASKS})        
+    ENDIF()    
+    
+ENDFOREACH(PATH ${CONTESTS_DIR})
 
 # Copyright (C) 2015 Nikolaj Schepsen
