@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -O3    CMakeFiles/T0478A.dir/src/478/A.cpp.o  -o bin/T0478A -rdynamic 

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nikolaj/Dropbox/Eclipse/(C++) Code Forces/src/448/A.cpp
+iostream
+-
+cmath
+-
+string
+-
+vector
+-
+

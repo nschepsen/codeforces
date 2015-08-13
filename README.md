@@ -9,7 +9,32 @@ To compile this code snippets use cmake . & make
 
 ## CHANGELOG ##
 
-### Code Forces, Last Updated @ 11.07.2015 ###
+### Code Forces, Updated @ 13.08.2015 ###
+
+* solved Task [567-A](http://codeforces.ru/contest/567/problem/A)
+* solved Task [557-A](http://codeforces.ru/contest/557/problem/A)
+* solved Task [556-A](http://codeforces.ru/contest/556/problem/A)
+* solved Task [556-B](http://codeforces.ru/contest/556/problem/B)
+* solved Task [554-A](http://codeforces.ru/contest/554/problem/A)
+* solved Task [554-B](http://codeforces.ru/contest/554/problem/B)
+* solved Task [552-A](http://codeforces.ru/contest/552/problem/A)
+* solved Task [552-B](http://codeforces.ru/contest/552/problem/B)
+* solved Task [552-D](http://codeforces.ru/contest/552/problem/D)
+* solved Task [519-A](http://codeforces.ru/contest/519/problem/A)
+* solved Task [513-A](http://codeforces.ru/contest/513/problem/A)
+* solved Task [509-A](http://codeforces.ru/contest/509/problem/A)
+* solved Task [474-A](http://codeforces.ru/contest/474/problem/A)
+* solved Task [471-A](http://codeforces.ru/contest/471/problem/A)
+* solved Task [466-A](http://codeforces.ru/contest/466/problem/A)
+* solved Task [427-A](http://codeforces.ru/contest/427/problem/A)
+* solved Task [405-A](http://codeforces.ru/contest/405/problem/A)
+* solved Task [268-B](http://codeforces.ru/contest/268/problem/B)
+* solved Task [237-A](http://codeforces.ru/contest/237/problem/A)
+* solved Task [230-A](http://codeforces.ru/contest/230/problem/A)
+* solved Task [230-B](http://codeforces.ru/contest/230/problem/B)
+* solved Task [230-C](http://codeforces.ru/contest/230/problem/C)
+
+### Code Forces, Updated @ 11.07.2015 ###
 
 * solved Task [551-A](http://codeforces.ru/contest/551/problem/A)
 * solved Task [551-C](http://codeforces.ru/contest/551/problem/C)

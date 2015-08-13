@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nikolaj/Dropbox/Eclipse/(C++) Code Forces/src/001/B.cpp
+iostream
+-
+vector
+-
+cmath
+-
+cstring
+-
+stdio.h
+-
+

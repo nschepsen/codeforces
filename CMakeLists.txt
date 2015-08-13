@@ -8,7 +8,7 @@ cmake_minimum_required (VERSION 2.8)
 # Copyright (C) 2015 Nikolaj Schepsen
 
 # SETTINGS
-set(CMAKE_CXX_FLAGS "-std=c++11 -O3 -Wno-unused-result") 
+set(CMAKE_CXX_FLAGS "-std=c++11 -O3") 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 
 # SUBFOLDERS

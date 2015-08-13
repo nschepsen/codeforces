@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -O3 -Wno-unused-result    CMakeFiles/T0554C.dir/src/554/C.cpp.o  -o bin/T0554C -rdynamic 
