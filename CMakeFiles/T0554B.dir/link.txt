@@ -1,1 +1,0 @@
-/usr/bin/c++   -std=c++11 -O3    CMakeFiles/T0554B.dir/src/554/B.cpp.o  -o bin/T0554B -rdynamic 
