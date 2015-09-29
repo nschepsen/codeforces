@@ -8,20 +8,19 @@
 
 int main(int argc, char** argv)
 {
-    std::ios_base::sync_with_stdio(0);
-    int n, p1c, p2c, rounds = 0;
+    int n, p1c, p2c, rounds = 0, counter = 0;
 
     std::cin >> n >> p1c;
+
     std::deque<int> p1(p1c);
 
     for (int i = 0; i < p1c; ++i) { std::cin >> p1[i]; }
 
     std::cin >> p2c;
+
     std::deque<int> p2(p2c);
 
     for (int i = 0; i < p2c; ++i) { std::cin >> p2[i]; }
-
-    std::deque<int> image(p1);
 
     while(!p1.empty() && !p2.empty())
     {
@@ -39,9 +38,13 @@ int main(int argc, char** argv)
             p2.push_back(a); p2.push_back(b);
         }
 
-        if(image == p1) { std::cout << -1 << std::endl; return 0; }
+        if((++counter) > 106)
+        {
+            std::cout << -1 << std::endl; return 0;
+        }
     }
 
     std::cout << rounds << " " << ((p1.empty()) ? 2 : 1) << std::endl;
+
     return 0;
 }
