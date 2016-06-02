@@ -3,35 +3,46 @@
 project("Code Forces (Competitive Programming)" CXX)
 
 # REQUIREMENTS
+
 cmake_minimum_required (VERSION 2.8)
 
-# Copyright (C) 2015 Nikolaj Schepsen
-
 # SETTINGS
+
 set(CMAKE_CXX_FLAGS "-std=c++11 -O3 -g -Wno-unused-result") 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 
+option(BUILD_GYMS "Build the gym folder" OFF)
+option(BUILD_LIVE_CONTESTS "Build the live-contest folder" OFF)
+
+if(BUILD_LIVE_CONTESTS)
+set(CONTENT ${PROJECT_BINARY_DIR}/src/live)
+elseif(BUILD_GYMS)
+set(CONTENT ${PROJECT_BINARY_DIR}/src/gym)
+else()
+set(CONTENT ${PROJECT_BINARY_DIR}/src/contests)
+endif()
+
 # SUBFOLDERS
-add_subdirectory (src)
 
-FILE(GLOB CONTESTS_DIR ${PROJECT_BINARY_DIR}/src/*)
+add_subdirectory (${CONTENT})
 
-FOREACH(PATH ${CONTESTS_DIR})   
+file(GLOB CONTESTS_DIR ${CONTENT}/*)
+foreach(PATH ${CONTESTS_DIR})   
  
     string(REGEX MATCH "[0-9]+" CONTEST ${PATH})  
         
-    IF(${CONTEST})
-        FILE(GLOB TASKS ${PROJECT_BINARY_DIR}/src/${CONTEST}/*.cpp)                            
-        FOREACH(TASK ${TASKS})
+    if(${CONTEST})
+        file(GLOB TASKS ${CONTENT}/${CONTEST}/*.cpp)                            
+        foreach(TASK ${TASKS})
         
             string(REGEX MATCH "[A-Z].cpp" TASK ${TASK})  
             string(REGEX REPLACE ".cpp" "" TASK ${TASK})
 
-            add_executable("T0${CONTEST}${TASK}" "src/${CONTEST}/${TASK}.cpp")
+            add_executable("T0${CONTEST}${TASK}" "${CONTENT}/${CONTEST}/${TASK}.cpp")
             
-        ENDFOREACH(TASK ${TASKS})        
-    ENDIF()    
+        endforeach(TASK ${TASKS})        
+    endif()    
     
-ENDFOREACH(PATH ${CONTESTS_DIR})
+endforeach(PATH ${CONTESTS_DIR})
 
 # Copyright (C) 2015 Nikolaj Schepsen
