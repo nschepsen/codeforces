@@ -15,22 +15,24 @@ int main(int argc, char** argv)
 
     for (int i = 0, a; i < n; ++i)
     {
-        std::cin >> a; v[i] = std::make_pair(a, i + 1);
+        std::cin >> a;
+
+        v[i] = std::make_pair(a, i + 1);
     }
 
     std::sort(v.begin(), v.end());
 
     for (int i = 0, d = 0; i < n; ++i)
     {
-        if((d += v[i].first) > k) { break; } cnt++;
+        if((d += v[i].first) > k) break; cnt++;
     }
 
     std::cout << cnt << std::endl;
 
     for (int i = 0; i < cnt; ++i)
     {
-        std::cout << v[i].second << " ";
+        std::cout << v[i].second << ((i == cnt - 1) ? "\n" : " ");
     }
 
-    std::cout << std::endl; return 0;
+    return 0;
 }

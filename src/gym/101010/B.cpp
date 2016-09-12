@@ -13,6 +13,8 @@ template <typename it> it last(it iter) { return --iter; }
 
 void solve(void);
 
+// TODO: rewrite this function
+
 int main(int argc, char** argv)
 {
     std::ios_base::sync_with_stdio(false);

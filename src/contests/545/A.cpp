@@ -6,10 +6,11 @@
  * URL: http://codeforces.ru/contest/545/problem/A
  */
 
+//TODO: reimplement
+
 int main(int argc, char** argv)
 {
-    std::vector<int> autos;
-    int n;
+    std::vector<int> autos; int n;
 
     std::cin >> n;
 
@@ -17,13 +18,8 @@ int main(int argc, char** argv)
 
     for (int i = 0; i < n; ++i)
     {
-        for (int j = 0; j < n; ++j)
-        {
-            std::cin >> matrix[i][j];
-        }
+        for (int j = 0; j < n; ++j) std::cin >> matrix[i][j];
     }
-
-
 
     for (int i = 0; i < n; ++i)
     {
@@ -42,10 +38,5 @@ int main(int argc, char** argv)
 
     std::cout << autos.size() << std::endl;
 
-    for (auto it = autos.cbegin(); it != autos.cend(); ++it)
-    {
-        std::cout << *it << " ";
-    }
-
-    return 0;
+    for (auto it = autos.cbegin(); it != autos.cend(); ++it) std::cout << *it << " "; return 0;
 }

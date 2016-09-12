@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-
 #include <algorithm>
 
 /*
@@ -13,7 +12,9 @@ int main(int argc, char** argv)
     std::ios_base::sync_with_stdio(0);
 
     int n, waiting = 0, count = 0;
+
     std::cin >> n;
+
     std::vector<int> v(n);
 
     for (int i = 0; i < n; ++i)
@@ -26,14 +27,10 @@ int main(int argc, char** argv)
     for (int i = 0; i < n; ++i)
     {
         if (waiting <= v[i])
-
         {
-            waiting += v[i];
-            count++;
+            waiting += v[i]; count++;
         }
     }
 
-    std::cout << count << std::endl;
-
-    return 0;
+    std::cout << count << std::endl; return 0;
 }

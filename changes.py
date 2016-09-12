@@ -40,7 +40,7 @@ def main():
                 if match("[A-Z].cpp", task) is not None:              
                     LOGS.append(Entry(contest, task[:-4]))
                 
-    LOGS = list(set(LOGS) - set([x.strip() for x in list(open("solved.txt", "r"))]))     
+    LOGS = list(set(LOGS) - set([x.strip() for x in list(open("CHANGELOG", "r"))]))     
     
     LOGS.sort(reverse=True)             
                 
