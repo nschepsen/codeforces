@@ -1,6 +1,5 @@
 #include <iostream>
-#include <string>
-
+#include <vector>
 #include <algorithm>
 
 /*
@@ -13,23 +12,25 @@ int main(int argc, char** argv)
     std::ios_base::sync_with_stdio(0);
 
     int n, sum = 0, c = 0;
+
     std::cin >> n;
 
-    std::vector<int> coins(n);
+    std::vector<int> v(n);
 
     for (int i = 0; i < n; ++i)
     {
-        std::cin >> coins[i]; sum += coins[i];
+    	std::cin >> v[i]; sum += v[i];
     }
 
-    std::sort(coins.begin(), coins.end(), std::greater<int>());
+    std::sort(v.begin(), v.end(), std::greater<int>());
 
-    for (int i = 0; i < coins.size(); ++i)
+    for (int i = 0; i < v.size(); ++i)
     {
-        if ((c += coins[i]) > (sum -= coins[i]))
+        if ((c += v[i]) > (sum -= v[i]))
         {
             std::cout << (i + 1) << std::endl; break;
         }
     }
+
     return 0;
 }

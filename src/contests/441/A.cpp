@@ -24,7 +24,7 @@ int main(int argc, char** argv)
         }
     }
 
-    printf("%d\n", ans.size()); for(const auto&e : ans) { printf("%d ", e); } printf("\n");
+    printf("%d\n", (int) ans.size()); for(const auto&e : ans) { printf("%d ", e); } printf("\n");
 
     return 0;
 }

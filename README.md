@@ -1,13 +1,27 @@
 ## PROJECT ##
 
-* ID: **C**ode **F**orces
-* Contact: info@schepsen.eu
+* ID: **C**ode!**F**ORCES
+* Contact: git@schepsen.eu
 
 ## USAGE ##
 
-To compile this code snippets use cmake . & make
+To compile these code snippets run
+```
+cmake -DCMAKE_BUILD_TYPE=[CONTESTS|LIVE|GYM] . & make
+```
+
+* -CONTEST, stands for the regular contests
+* -LIVE, stands for the live solved contests; In general contains no Tasks
 
 ## CHANGELOG ##
+
+### Code Forces, updated @ 2018-05-25 ###
+
+* solved Task [842-A](http://codeforces.ru/contest/842/problem/A)
+* solved Task [842-B](http://codeforces.ru/contest/842/problem/B)
+* solved Task [732-A](http://codeforces.ru/contest/732/problem/A)
+* solved Task [732-B](http://codeforces.ru/contest/732/problem/B)
+* solved Task [732-C](http://codeforces.ru/contest/732/problem/C)
 
 ### Code Forces, updated @ 2016-09-12 ###
 
