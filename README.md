@@ -7,11 +7,15 @@
 
 To compile these code snippets run
 ```
-cmake -DCMAKE_BUILD_TYPE=[CONTESTS|LIVE|GYM] . & make
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=[CONTESTS|LIVE|GYM] ..
+make
 ```
+COMMENTS: 
 
-* -CONTEST, stands for the regular contests
-* -LIVE, stands for the live solved contests; In general contains no Tasks
+* CONTEST, stands for the regular contests
+* LIVE, stands for the live solved contests; In general contains no Tasks
 
 ## CHANGELOG ##
 
