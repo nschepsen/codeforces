@@ -12,10 +12,10 @@ cd build
 cmake -DCMAKE_BUILD_TYPE=[CONTESTS|LIVE|GYM] ..
 make
 ```
-COMMENTS: 
+COMMENTS:
 
 * CONTEST, stands for the regular contests
-* LIVE, stands for the live solved contests; In general contains no Tasks
+* LIVE, stands for the live solved contests; In general it shouldn't contain any Tasks
 
 ## CHANGELOG ##
 

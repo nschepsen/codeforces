@@ -32,7 +32,7 @@ def main():
 
         testcase += 1
 
-        pattern = 'src/contests/%3d/%s.%d' % (contest, task, testcase)
+        pattern = '../src/live/%3d/%s.%d' % (contest, task, testcase)
 
         if path.isfile(pattern + '.out'):
 
@@ -40,12 +40,12 @@ def main():
 
             ts = time()
 
-            ret = Popen(['./build/T%04d%s' % (contest, task)], stdin=open(pattern + '.in', 'r'), stdout=PIPE, shell=True)
+            ret = Popen(['./T%04d%s' % (contest, task)], stdin=open(pattern + '.in', 'r'), stdout=PIPE, shell=True)
             out = ret.communicate()[0].decode()
 
             te = time()
 
-            print('# T%04d%s # %d: %s %s (%.2f ms)' % (contest, task, testcase, 20 * '.', compare(out, ans), (te - ts) * 1000))
+            print('# T%04d%s # %d: %s %s (%.2f ms)' % (contest, task, testcase, 10 * '.', compare(out, ans), (te - ts) * 1000))
 
         else:
 
